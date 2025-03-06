@@ -1,0 +1,30 @@
+def hitung_biaya_pengiriman(berat, jarak, jenis_pengiriman, is_member):
+
+    # Biaya dasar
+    biaya_dasar = 10000
+    total_biaya = biaya_dasar
+    
+    # Tambahan biaya berdasarkan berat
+    if berat > 5:
+        total_biaya += 5000
+
+    # Tambahan biaya berdasarkan jarak
+    if jarak > 10:
+        total_biaya += 8000
+
+    # Tambahan biaya untuk pengiriman express
+    if jenis_pengiriman.lower() == 'express':
+        total_biaya += 20000
+        
+    # Diskon untuk member
+    if is_member:
+        total_biaya *= 0.9  # Diskon 10%
+    return total_biaya
+
+# Contoh penggunaan fungsi
+berat_paket = 6  # dalam kg
+jarak_pengiriman = 12  # dalam km
+jenis_pengiriman = 'express'  # 'biasa' atau 'express'
+is_member = True  # True jika member, False jika non-member
+total = hitung_biaya_pengiriman(berat_paket, jarak_pengiriman, jenis_pengiriman, is_member)
+print(f'Total biaya pengiriman: Rp {total:.2f}')
