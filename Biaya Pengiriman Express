@@ -1,0 +1,61 @@
+# Informasi Pengguna
+nama = "MUHAMAD ABDU"
+kelas = "TI.24.A1"
+nim = "312410143"
+
+print(f"Nama: {nama}")
+print(f"Kelas: {kelas}")
+print(f"NIM: {nim}")
+print()
+
+def hitung_biaya_pengiriman(berat, jarak, express, member):
+    # Biaya dasar
+    biaya_dasar = 10000
+    
+    # Tambahan biaya berdasarkan berat
+    if berat > 5:
+        biaya_berat = 5000
+    else:
+        biaya_berat = 0
+    
+    # Tambahan biaya berdasarkan jarak
+    if jarak > 10:
+        biaya_jarak = 8000
+    else:
+        biaya_jarak = 0
+    
+    # Tambahan biaya untuk layanan express
+    if express:
+        biaya_express = 20000
+    else:
+        biaya_express = 0
+    
+    # Hitung total biaya sebelum diskon
+    total_biaya = biaya_dasar + biaya_berat + biaya_jarak + biaya_express
+    
+    # Hitung diskon untuk member
+    if member:
+        diskon = total_biaya * 0.10
+    else:
+        diskon = 0
+    
+    # Hitung total biaya setelah diskon
+    total_setelah_diskon = total_biaya - diskon
+    
+    return total_setelah_diskon
+
+# Input dari pengguna
+berat = float(input("Masukkan berat paket (kg): "))
+jarak = float(input("Masukkan jarak pengiriman (km): "))
+express_input = input("Apakah menggunakan layanan express? (ya/tidak): ").strip().lower()
+member_input = input("Apakah Anda member? (ya/tidak): ").strip().lower()
+
+# Konversi input layanan express dan member ke boolean
+express = express_input == 'ya'
+member = member_input == 'ya'
+
+# Hitung total biaya pengiriman
+total = hitung_biaya_pengiriman(berat, jarak, express, member)
+
+# Tampilkan hasil
+print(f"Total biaya pengiriman: Rp {total:.2f}")
