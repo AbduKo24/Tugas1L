@@ -1,6 +1,7 @@
 # Tugas1L
 # Penjelasan Code
-1.![Cuplikan layar 2025-03-06 173328]
+![Cuplikan layar 2025-03-06 173328]
+
 1.Informasi Pengguna: Di bagian atas kode, terdapat variabel nama, kelas, dan nim yang menyimpan informasi Anda. Informasi ini dicetak ke layar sebelum program meminta input dari pengguna.
 
 2.Fungsi dan Logika: Fungsi hitung_biaya_pengiriman dan logika perhitungan biaya tetap sama seperti sebelumnya.
