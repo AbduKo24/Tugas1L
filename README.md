@@ -21,4 +21,4 @@
 10.Output: Total biaya pengiriman ditampilkan dengan format yang sesuai.
 
 # Output
-[Output(Output.png)
+![Output(Output.png)
